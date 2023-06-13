@@ -1,9 +1,7 @@
 import React from 'react';
 
 const MainPage = () => (
-    <div>
-        main
-    </div>
+    <div />
 );
 
 export default MainPage;
