@@ -1,5 +1,5 @@
-import {Sidebar} from "./ui/sidebar/Sidebar";
+import { Sidebar } from './ui/sidebar/Sidebar';
 
 export {
-    Sidebar
-}
+    Sidebar,
+};
