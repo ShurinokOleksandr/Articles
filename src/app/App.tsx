@@ -3,7 +3,7 @@ import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from 'app/providers/router';
 import { Navbar } from 'widgets/navbar';
-import { useTheme } from 'app/providers/ThemeProvider';
+import { useTheme } from 'app/providers/theme-provider';
 import { Sidebar } from 'widgets/sidebar';
 
 const App = () => {
