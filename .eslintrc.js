@@ -4,10 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: [
-        'plugin:react/recommended',
-        'airbnb',
-    ],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:storybook/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -16,19 +13,14 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: [
-        'react',
-        '@typescript-eslint',
-    ],
+    plugins: ['react', '@typescript-eslint'],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
-        'react/jsx-filename-extension': [2,
-            {
-                extensions: ['.js', '.jsx', '.tsx'],
-            },
-        ],
+        'react/jsx-filename-extension': [2, {
+            extensions: ['.js', '.jsx', '.tsx'],
+        }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
@@ -40,13 +32,20 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
-        'max-len': ['error', { code: 200, ignoreComments: true }],
-        'react/jsx-curly-brace-presence': [
-            'error',
-            { props: 'ignore', children: 'ignore' },
-        ],
+        'max-len': ['error', {
+            code: 200,
+            ignoreComments: true,
+        }],
+        'react/jsx-curly-brace-presence': ['error', {
+            props: 'ignore',
+            children: 'ignore',
+        }],
     },
     globals: {
         __IS_DEV__: true,
     },
+    overrides: [{
+        files: ['**/src/**/*.test.{ts,tsx}'],
+        rules: {},
+    }],
 };

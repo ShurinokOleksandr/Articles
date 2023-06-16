@@ -13,9 +13,10 @@ export const Sidebar = ({ className }:SidebarProps) => {
     const { i18n } = useTranslation();
     const [collapsed, setCollapsed] = useState(false);
     return (
-        <div className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
-            <Button onClick={() => setCollapsed((prev) => !prev)}>
+        <div data-testid="sidebar" className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
+            <Button data-testid="btnColl" onClick={() => setCollapsed((prev) => !prev)}>
                 {i18n.t('Переключить')}
+                lol
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
