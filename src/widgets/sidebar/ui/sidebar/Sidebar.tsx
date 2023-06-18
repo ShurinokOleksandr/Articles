@@ -10,13 +10,12 @@ interface SidebarProps {
     className?:string
 }
 export const Sidebar = ({ className }:SidebarProps) => {
-    const { i18n } = useTranslation();
+    const { t } = useTranslation();
     const [collapsed, setCollapsed] = useState(false);
     return (
         <div data-testid="sidebar" className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
             <Button data-testid="btnColl" onClick={() => setCollapsed((prev) => !prev)}>
-                {i18n.t('Переключить')}
-                lol
+                {t('Переключить')}
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
