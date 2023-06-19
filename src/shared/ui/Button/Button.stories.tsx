@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Theme } from 'app/providers/theme-provider';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonSize, ThemeButton } from './Button';
 import Sun from '../../assets/icons/sun.svg';
 import Moon from '../../assets/icons/cloud_moon.svg';
 
@@ -37,5 +37,29 @@ export const OutlineButton: Story = {
     args: {
         children: 'Test',
         theme: ThemeButton.OUTLINE,
+    },
+};
+export const MCollapseButton: Story = {
+    args: {
+        children: '>',
+        theme: ThemeButton.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.M,
+    },
+};
+export const LCollapseButton: Story = {
+    args: {
+        children: '>',
+        theme: ThemeButton.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.L,
+    },
+};
+export const XLCollapseButton: Story = {
+    args: {
+        children: '>',
+        theme: ThemeButton.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.XL,
     },
 };
