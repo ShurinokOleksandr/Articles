@@ -4,7 +4,7 @@ import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 import { PageLoader } from 'shared/ui/page-loader/PageLoader';
 
 const AppRouter = () => (
-    <Suspense fallback={<PageLoader className={'page-loader'} />}>
+    <Suspense fallback={<PageLoader className="page-loader" />}>
         <Routes>
             {
                 Object.values(routeConfig).map(({ path, element }) => (

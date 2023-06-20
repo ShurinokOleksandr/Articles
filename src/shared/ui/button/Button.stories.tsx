@@ -6,7 +6,7 @@ import Sun from '../../assets/icons/sun.svg';
 import Moon from '../../assets/icons/cloud_moon.svg';
 
 const meta: Meta<typeof Button> = {
-    title: 'Shared/Button',
+    title: 'Shared/button',
     component: Button,
     tags: ['autodocs'],
 };
@@ -19,6 +19,12 @@ export const LightThemeButton: Story = {
         children: <Sun />,
         theme: ThemeButton.CLEAR,
     },
+};
+export const DarkThemeButton: Story = {
+    args: {
+        children: <Moon />,
+        theme: ThemeButton.CLEAR,
+    },
     decorators: [
         (Story) => (
             <div className={`app ${Theme.DARK}`}>
@@ -26,12 +32,6 @@ export const LightThemeButton: Story = {
             </div>
         ),
     ],
-};
-export const DarkThemeButton: Story = {
-    args: {
-        children: <Moon />,
-        theme: ThemeButton.CLEAR,
-    },
 };
 export const OutlineButton: Story = {
     args: {
