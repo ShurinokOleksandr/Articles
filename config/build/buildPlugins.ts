@@ -3,6 +3,8 @@ import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/config';
 
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+
 export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
     const plugins = [
         new HTMLWebpackPlugin({
@@ -16,6 +18,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
+        new CaseSensitivePathsPlugin(),
     ];
 
     if (isDev) {

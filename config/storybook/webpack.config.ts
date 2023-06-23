@@ -1,9 +1,12 @@
-import webpack, { RuleSetRule } from 'webpack';
+import webpack, { RuleSetRule, DefinePlugin } from 'webpack';
 import path from 'path';
 import { BuildPaths } from '../build/types/config';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 
 export default ({ config }: {config: webpack.Configuration}) => {
+    config.plugins.push(new DefinePlugin({
+        __IS_DEV__: true,
+    }));
     const paths: BuildPaths = {
         build: '',
         html: '',

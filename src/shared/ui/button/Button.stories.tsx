@@ -63,3 +63,10 @@ export const XLCollapseButton: Story = {
         size: ButtonSize.XL,
     },
 };
+export const DisabledButton: Story = {
+    args: {
+        children: 'Text',
+        theme: ThemeButton.OUTLINE,
+        disabled: true,
+    },
+};

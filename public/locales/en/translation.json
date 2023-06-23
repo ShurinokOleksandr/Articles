@@ -5,5 +5,10 @@
   "Переключить": "Toggle",
   "Обновить страницу": "Reload page",
   "Произошла непредвиденная ошибка": "Something get wrong",
-  "Войти": "Log in"
+  "Войти": "Log in",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Auth form",
+  "Вы ввели неверный логин или пароль": "Uncorrected username or password",
+  "Выйти": "Log out"
 }

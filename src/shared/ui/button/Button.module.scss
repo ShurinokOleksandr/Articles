@@ -12,8 +12,9 @@
 }
 
 .outline {
-    padding: 20px;
+    padding: 10px;
     border: 1px solid var(--primary-color);
+    border-radius: 15px 5px;
     background: var(--inverted-bg-color);
 }
 
@@ -58,4 +59,8 @@
 
 .size_xl {
     font: var(--font-xl);
+}
+
+.disabled {
+    opacity: 0.5;
 }
