@@ -27,9 +27,11 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
         });
 
         return () => {
-            Object.entries(reducers).forEach(([name]:ReducersListEntries) => {
-                store.reducerManager.remove(name);
-            });
+            if (removeAfterUnmount) {
+                Object.entries(reducers).forEach(([name, reducer]: ReducersListEntries) => {
+                    store.reducerManager.remove(name);
+                });
+            }
         };
     }, []);
     return (

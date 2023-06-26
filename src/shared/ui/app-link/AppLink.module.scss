@@ -1,13 +1,13 @@
 .AppLink {
     color: var(--primary-color);
-    font-weight: bold;
-    text-decoration: none;
+    letter-spacing: 1.5px;
+   text-decoration: none;
 }
 
 .primary {
-    color: yellow;
+    color: var(--primary-color);
 }
 
 .secondary {
-    color: red;
+    color: var(--primary-color);
 }
