@@ -11,7 +11,7 @@ import { getLoginPassword } from '../../modal/selectors/getLoginPassword/getLogi
 import { getLoginIsLoading } from '../../modal/selectors/getLoginIsLoading/getLoginIsLoading';
 import { getLoginError } from '../../modal/selectors/getLoginError/getLoginError';
 import { loginByUsername } from '../../modal/services/loginByUsername/loginByUsername';
-import { loginActions, loginReducer } from '../../modal/slice/userSlice';
+import { loginActions, loginReducer } from '../../modal/slice/loginSlice';
 import cls from './LoginForm.module.scss';
 
 export interface LoginFormProps {
