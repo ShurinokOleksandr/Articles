@@ -1,7 +1,7 @@
 import { UserSchema } from 'entities/user';
 import { LoginSchema } from 'features/auth-by-username';
 import {
-    AnyAction, EnhancedStore, Reducer, ReducersMapObject,
+    AnyAction, Dispatch, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { CombinedState } from 'redux';
 import { ProfileSchema } from 'entities/profile';
@@ -26,9 +26,9 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema>{
     reducerManager:ReducerManager;
 }
 
-interface ThunkExtraArg {
+export interface ThunkExtraArg {
     api:AxiosInstance;
-    navigate:(to: To, options?: NavigateOptions) => void;
+    navigate?:(to: To, options?: NavigateOptions) => void;
 }
 export interface ThunkConfig<T> {
     rejectValue: T,

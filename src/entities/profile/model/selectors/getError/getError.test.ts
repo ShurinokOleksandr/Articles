@@ -1,16 +1,13 @@
-import { DeepPartial } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/store-provider';
 import { getError } from './getError';
 
-describe('Get first name', () => {
-    test('Get name', () => {
+describe('Test error', () => {
+    test('Get error', () => {
         const state: DeepPartial<StateSchema> = {
             profile: {
-                data: {
-                    first: 'sasa',
-                },
+                error: 'error',
             },
         };
-        expect(getError(state as StateSchema)).toEqual('sasa');
+        expect(getError(state as StateSchema)).toEqual('error');
     });
 });

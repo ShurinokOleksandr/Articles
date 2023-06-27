@@ -1,16 +1,13 @@
-import { DeepPartial } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/store-provider';
 import { getIsLoading } from './getIsLoading';
 
-describe('Get first name', () => {
-    test('Get name', () => {
+describe('Test isLoading', () => {
+    test('Get isLoading', () => {
         const state: DeepPartial<StateSchema> = {
             profile: {
-                data: {
-                    first: 'sasa',
-                },
+                isLoading: true,
             },
         };
-        expect(getIsLoading(state as StateSchema)).toEqual('sasa');
+        expect(getIsLoading(state as StateSchema)).toEqual(true);
     });
 });
