@@ -18,6 +18,13 @@
     background: var(--inverted-bg-color);
 }
 
+.outlineRed {
+    padding: 10px;
+    border: 1px solid var(--red-light);
+    color: var(--red-light);
+    background: none;
+}
+
 .background {
     background: var(--bg-color);
     color: var(--primary-color);

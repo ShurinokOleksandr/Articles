@@ -8,6 +8,7 @@ export interface SidebarItemsType {
     path:string;
     text:string;
     Icon:IconType;
+    authOnly?:boolean;
 }
 export const SidebarItemsList: Array<SidebarItemsType> = [
     {
@@ -24,6 +25,7 @@ export const SidebarItemsList: Array<SidebarItemsType> = [
         path: RoutePath.profile,
         text: 'Профайл страница',
         Icon: MdPeopleAlt,
+        authOnly: true,
     },
 
 ];

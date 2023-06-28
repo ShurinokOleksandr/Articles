@@ -2,5 +2,8 @@
   "Профиль": "Profile",
   "Редактировать": "Edit",
   "Ваше имя": "Your firstname",
-  "Ваша фамилия": "Your lastname"
+  "Ваша фамилия": "Your lastname",
+  "Отменить": "Cancel",
+  "Сохранить": "Save",
+  "Укажите валюту": "Select currency"
 }
