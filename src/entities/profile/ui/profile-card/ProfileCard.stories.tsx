@@ -1,14 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Theme } from 'app/providers/theme-provider';
-import { StoreProvider } from 'app/providers/store-provider';
+import { ProfileCard } from 'entities/profile';
 import { Currency } from 'entities/currency';
 import { Country } from 'entities/country';
-import ProfilePage from './ProfilePage';
 
-const meta: Meta<typeof ProfilePage> = {
-    title: 'Pages/ProfilePage',
-    component: ProfilePage,
+const meta: Meta<typeof ProfileCard> = {
+    title: 'Entities/ProfileCard',
+    component: ProfileCard,
     tags: ['autodocs'],
 };
 const profileData = {
@@ -22,29 +21,39 @@ const profileData = {
     avatar: 'https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg',
 };
 export default meta;
-type Story = StoryObj<typeof ProfilePage>;
+type Story = StoryObj<typeof ProfileCard>;
 
-export const LightProfilePage: Story = {
+export const LightProfileCard: Story = {
     args: {
-
+        data: profileData,
+    },
+};
+export const DarkProfileCard: Story = {
+    args: {
+        data: profileData,
     },
     decorators: [
         (Story) => (
-            <StoreProvider initialState={{ profile: { form: profileData } }}>
-                <Story />
-            </StoreProvider>
-        ),
-    ],
-};
-export const DarkProfilePage: Story = {
-    args: {},
-    decorators: [
-        (Story) => (
             <div className={`app ${Theme.DARK}`}>
-                <StoreProvider initialState={{ profile: { form: profileData } }}>
-                    <Story />
-                </StoreProvider>
+                <Story />
             </div>
         ),
     ],
+};
+export const WithErrorDark: Story = {
+    args: {
+        error: 'Error',
+    },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.DARK}`}>
+                <Story />
+            </div>
+        ),
+    ],
+};
+export const WithErrorLight: Story = {
+    args: {
+        error: 'Error',
+    },
 };

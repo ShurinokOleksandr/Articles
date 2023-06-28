@@ -15,10 +15,10 @@ const preview: Preview = {
         },
     },
     decorators: [
-        (Story) => (
+        (Story, state) => (
             <div className={`app ${Theme.LIGHT}`}>
                 <BrowserRouter>
-                    <StoreProvider>
+                    <StoreProvider initialState={state}>
                         <Story />
                     </StoreProvider>
                 </BrowserRouter>
