@@ -5,7 +5,7 @@ import { PageLoader } from 'shared/ui/page-loader/PageLoader';
 import { RequiredAuth } from 'app/providers/router/ui/RequiredAuth';
 
 const AppRouter = () => {
-    const rendreWithWrraper = useCallback((route: AppRoutesProps) => (
+    const renderWithWrapper = useCallback((route: AppRoutesProps) => (
         <Route
             key={route.path}
             path={route.path}
@@ -23,7 +23,7 @@ const AppRouter = () => {
     return (
         <Suspense fallback={<PageLoader className="page-loader" />}>
             <Routes>
-                {Object.values(routeConfig).map(rendreWithWrraper)}
+                {Object.values(routeConfig).map(renderWithWrapper)}
             </Routes>
         </Suspense>
     );

@@ -2,7 +2,7 @@ import { IconType } from 'react-icons';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AiOutlineHome } from 'react-icons/ai';
 import { BiBook } from 'react-icons/bi';
-import { MdPeopleAlt } from 'react-icons/md';
+import { MdPeopleAlt, MdOutlineArticle } from 'react-icons/md';
 
 export interface SidebarItemsType {
     path:string;
@@ -23,9 +23,14 @@ export const SidebarItemsList: Array<SidebarItemsType> = [
     },
     {
         path: RoutePath.profile,
-        text: 'Профайл страница',
+        text: 'Профиль',
         Icon: MdPeopleAlt,
         authOnly: true,
     },
-
+    {
+        path: RoutePath.articles,
+        text: 'Статьи',
+        Icon: MdOutlineArticle,
+        authOnly: true,
+    },
 ];

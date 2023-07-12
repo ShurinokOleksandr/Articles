@@ -3,6 +3,8 @@ import { MainPage } from 'pages/main-page';
 import { AboutPage } from 'pages/about-page';
 import { NotFoundPage } from 'pages/not-found-page';
 import { ProfilePage } from 'pages/profile-page';
+import { ArticleDetailsPage } from 'pages/article-details-page';
+import { ArticlesPage } from 'pages/articles-page';
 
 export type AppRoutesProps = RouteProps & {
     authOnly?: boolean;
@@ -11,13 +13,17 @@ export enum AppRoutes{
     MAIN = 'main',
     ABOUT = 'about',
     PROFILE = 'profile',
-    NOT_FOUND = 'notFound'
+    ARTICLES = 'articles',
+    ARTICLE_DETAILS = 'articles_details',
+    NOT_FOUND = 'not_found'
 }
 export const RoutePath:Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
     [AppRoutes.ABOUT]: '/about',
     [AppRoutes.PROFILE]: '/profile',
-    [AppRoutes.NOT_FOUND]: '/*',
+    [AppRoutes.ARTICLES]: '/articles',
+    [AppRoutes.ARTICLE_DETAILS]: '/articles/',
+    [AppRoutes.NOT_FOUND]: '*',
 };
 
 export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
@@ -34,8 +40,18 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
         element: <ProfilePage />,
         authOnly: true,
     },
+    [AppRoutes.ARTICLES]: {
+        path: RoutePath.articles,
+        element: <ArticlesPage />,
+        authOnly: true,
+    },
+    [AppRoutes.ARTICLE_DETAILS]: {
+        path: `${RoutePath.articles_details}:id`,
+        element: <ArticleDetailsPage />,
+        authOnly: true,
+    },
     [AppRoutes.NOT_FOUND]: {
-        path: RoutePath.notFound,
+        path: RoutePath.not_found,
         element: <NotFoundPage />,
     },
 };
