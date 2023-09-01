@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { Theme } from 'app/providers/theme-provider';
 import { CommentList } from './CommentList';
 
 const meta: Meta<typeof CommentList> = {

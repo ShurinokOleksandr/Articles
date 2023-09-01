@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { Theme } from 'app/providers/theme-provider';
 import { CommentCard } from './CommentCard';
 
 const meta: Meta<typeof CommentCard> = {
-    title: 'Shared/CommentCard',
+    title: 'Entities/CommentCard',
     component: CommentCard,
     tags: ['autodocs'],
 };
